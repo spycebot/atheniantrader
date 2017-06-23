@@ -11,28 +11,21 @@
 <div>
   <div>
     <label>Name: </label>
-    <input [(ngModel)]="player.name" placeholder="name">
+    <input [(ngModel)]="player.name" placeholder="Playe Name">
   </div>
   <div>
     <label>Ship: </label>
-    <input [(ngModel)]="ship" placeholder="name">
+    <input [(ngModel)]="ship.name" placeholder="Ship Name">
   </div>
   <button (click)="startGame()">Start Game</button>
 </div>
-<div id="playerData">
-  <h2>Player Data</h2>
-    <div>
-      <label>Name: </label>
-      {{player.name}}
-    </div>
-    <div>
-      <label>Ship: </label>
-      {{ship}}
-    </div>
-    <div>
-      <label>Money: </label>
-      {{player.duckets}}
-    </div>
-
-</div> <!-- id is playerData -->
+<player-detail [player]="player" [ship]="ship"></player-detail>
+<ship-detail [ship]="ship"></ship-detail>
+<div>
+	<h2>Player Two</h2>
+	<div>
+		<label>Name: </label>
+		{{ playerTwo.name }}
+	</div>
+</div>
 
