@@ -1,5 +1,34 @@
 # Atheniantrader
 
+We achieve HTML5/CSS3 gaming by relying on Angular to convert stateless HTML into a gameable environment. The metaphor is ancient greece, using terms from the Odyssey, but roughly set in 323 BC when references are required. Cross that with an European-esque New York hussle, with [3D] visuals conveniently decoupled from the game state.
+
+class Player {
+	name: string;
+	duckets: number;
+	ship: Ship;
+	warehouseSize: number;
+	warehouseContent: [0, 0, 0, 0];
+	location: Vector2();
+	destination: Port;
+}
+
+class Ship {
+	name: string;
+	size: number;
+	hp: number;
+	content: number;
+}
+
+class Port {
+	name: string;
+	content: [0, 0, 0, 0];
+	sellPrice: [0, 0, 0, 0];
+	buyPrice: [0, 0, 0, 0];
+	location: Vector2();
+}
+
+-----
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.2.
 
 ## Development server
