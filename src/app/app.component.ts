@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
+import { COMMODITIES } from './commodities';
+
 import { Player } from './player';
 import { Ship } from './ship';
-//import { CommoditiesService } from './commodities.service';
-import { COMMODITIES } from './commodities';
+import { Port } from './port';
 
 /*
 export class Ship {
@@ -25,17 +26,10 @@ export class Ship {
 })
 
 export class AppComponent {
-  //constructor(private commoditiesService: CommoditiesService) { }
   title = 'Athenian Trader';
   commodities = COMMODITIES;
-  //this.commodities = this.commoditiesService.getCommodities();
   /* player = 'Jason';
   duckets = 0; */
-  player: Player = {
-  	id: 1,
-  	name: 'Jason',
-  	duckets: 5050
-  }
 
 	playerTwo: Player = {
 		id: 2,
@@ -43,15 +37,29 @@ export class AppComponent {
 				duckets: 2
 	}
 
+  player: Player = {
+    id: 1,
+    name: 'Jason',
+    duckets: 1000
+    //ship: new Ship()
+  }
+
   //ship = 'Argo';
   ship: Ship = {
-	id: 1,
+    id: 1,
 	  name: 'Argo',
 	  size: 50,
     hp: 55,
-    cargo: [25, 0, 0, 0]
+    cargo: [25, 0, 0, 0],
+    available: 25
  }
-
+ port: Port = {
+    id: 1,
+    name: 'Athens',
+    stock: [100, 50, 10, 0],
+    sellPrice: [12, 120, 1200, 12000],
+    buyPrice: [8, 80, 800, 8000]
+ }
 
   startGame(): void {
   	console.log("startGame!");
