@@ -14,9 +14,12 @@
     </div>
     <div>
     	<h3>Cargo</h3>
-    	<ul>
-    		<li><label>Wheat </label> 50</li>
-    	</ul>
+    	<table>
+    		<tr *ngFor="let cargo of ship.cargo; let i  = index">
+    			<td>{{commodities[i]}}</td>
+    			<td>{{cargo}}</td>
+    		</tr>
+    	</table>
       	
     </div>
 </div>

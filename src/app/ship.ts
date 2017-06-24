@@ -1,7 +1,7 @@
 export class Ship {
-  id: number;
+  id: Number;
   name: string;
-  size: number;
+  size: Number;
   hp: number;
-  cargo: [0, 0, 0, 0];
+  cargo: Number[];
 }

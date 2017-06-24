@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Ship } from './ship';
+import { COMMODITIES } from './commodities';
 
 @Component({
 	selector: 'ship-detail',
@@ -7,4 +8,5 @@ import { Ship } from './ship';
 })
 export class ShipDetailComponent {
 	@Input() ship: Ship;
+	commodities = COMMODITIES;
 }
