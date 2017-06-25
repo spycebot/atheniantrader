@@ -1,17 +1,42 @@
 <!--The whole content below can be removed with the new code.-->
 <div style="text-align:center">
   <h1>
-    Welcome to {{title}}!!
+   {{title}}
   </h1>
 <!-- object data="assets/atLogoMock.svg" type="image/svg+xml" -->
   <img src="assets/atFallback.jpg" alt="Constantine Volanakis"/>
 <!-- /object -->
+  <p id="builtBy">Built by Shannon Ware in Ireland.</p>
+  <input type="button" value="Start" />
+  <input type="button" value="How To" />
 </div>
 <div>
   <h2>How To Play</h2>
-  <p>The goal is simple, make a lot of money. In your case, we'll start off easy and say one million duckets would make and <em>okay</em> retirement. How we make money is also simple: buy low and sell high. It's not trigonometry! However, its not all that you would think. Luck plays a part, and life on the open water -- how shall we say? -- has it's <em>ups</em>, and <em>downs!</em></p>
+  <p>The goal is simple, make a lot of money. In your case, we'll start off easy and say one million duckets would make and <em>okay</em> retirement. How we make money even simpler: buy low and sell high. It's not trigonometry! However, its not all that you'd think. Luck plays a part, and life on the open water -- how shall we say? -- has it's <em>ups</em>, and <em>downs!</em></p>
   <p>You begin the game in your home port of Athens, with {{player.duckets}} duckets in cash, a small ship, and a load of wheat. Sail from port to port, buying commodities where they are cheap and selling them where they are expensive.</p>
 </div>
+<div id="sample">
+  <div class="sampleBubblegumSans">
+  <h2>Athenian Trader</h2>
+    <p>Sample text can come in any shape and size. You can even make a famous quote, such as, 'You gotta do what you gotta do!'</p>
+  </div> <!-- id is sampleBubblegumSans -->
+  <div class="samplePortLligatSans">
+  <h2>Athenian Trader</h2>
+    <p>Sample text can come in any shape and size. You can even make a famous quote, such as, 'You gotta do what you gotta do!'</p>
+  </div> <!-- id is samplePortLligatSans -->
+  <div class="sampleOverlock">
+  <h2>Athenian Trader</h2>
+    <p>Sample text can come in any shape and size. You can even make a famous quote, such as, 'You gotta do what you gotta do!'</p>
+  </div> <!-- id is sampleOverlock -->
+  <div class="sampleSkranji">
+  <h2>Athenian Trader</h2>
+    <p>Sample text can come in any shape and size. You can even make a famous quote, such as, 'You gotta do what you gotta do!'</p>
+  </div> <!-- id is sampleSkranji -->
+  <div class="sampleMirza">
+  <h2>Athenian Trader</h2>
+    <p>Sample text can come in any shape and size. You can even make a famous quote, such as, 'You gotta do what you gotta do!'</p>
+  </div> <!-- id is sampleMirza -->
+</div> <!-- id is sample -->
 <h2>Create Player</h2>
 <div>
   <div>
@@ -22,12 +47,12 @@
     <label>Ship: </label>
     <input [(ngModel)]="ship.name" placeholder="Ship Name">
   </div>
-  <button (click)="startGame()">Start Game</button>
+  <input type="button" value="Start Game" (click)="startGame()" />
 </div>
 <player-detail [player]="player" [ship]="ship"></player-detail>
 <ship-detail [ship]="ship"></ship-detail>
 <port-detail [port]="port" [player]="player" [ship]="ship"></port-detail>
-
+<!-- router-outlet></router-outlet -->
 <!-- div>
 	<h2>Player Two</h2>
 	<div>

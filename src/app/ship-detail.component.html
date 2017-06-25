@@ -1,17 +1,19 @@
 <div>
 	<h2>Ship Details</h2>
-    <div>
-      <label>Ship Name: </label>
-      {{ ship.name }}
-    </div>
-    <div>
-      <label>Size: </label>
-      {{ ship.size }} ( {{ship.available}} )
-    </div>
-    <div>
-      <label>HP: </label>
-      {{ ship.hp }}
-    </div>
+    <table>
+      <tr>
+        <td>Ship Name: </td>
+        <td>{{ ship.name }}</td>
+      </tr>
+      <tr>
+        <td>Size: </td>
+        <td>{{ ship.size }} ( {{ship.available}} )</td>
+      </tr>
+      <tr>
+        <td>HP: </td>
+        <td>{{ ship.hp }}</td>
+      </tr>
+    </table>
     <div>
     	<h3>Cargo</h3>
     	<table>

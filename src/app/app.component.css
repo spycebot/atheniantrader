@@ -1,2 +1,9 @@
-svg { border: 4px solid grey; }
-td { cursor: pointer; }
+.sampleBubblegumSans { font-family: 'Bubblegum Sans', cursive; }
+.samplePortLligatSans { font-family: 'Port Lligat Sans', sans-serif; }
+.sampleOverlock { font-family: 'Overlock', cursive; }
+.sampleSkranji { font-family: 'Skranji', cursive; }
+.sampleMirza { font-family: 'Mirza', cursive; }
+
+#sample {
+	display: none; /* initial, none */
+}
