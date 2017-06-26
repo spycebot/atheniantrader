@@ -8,7 +8,7 @@
 <!-- /object -->
   <p id="builtBy">Built by Shannon Ware in Ireland.</p>
   <input type="button" value="Start" />
-  <input type="button" value="How To" />
+  <input type="button" value="How to Play" routerLink="/how-to-play/" />
 </div>
 <!-- div>
   <h2>How To Play</h2>
@@ -37,21 +37,23 @@
     <p>Sample text can come in any shape and size. You can even make a famous quote, such as, 'You gotta do what you gotta do!'</p>
   </div> <!-- id is sampleMirza -->
 </div> <!-- id is sample -->
-<h2>Create Player</h2>
 <div>
-  <div>
-    <label>Name: </label>
-    <input [(ngModel)]="player.name" placeholder="Playe Name">
-  </div>
-  <div>
-    <label>Ship: </label>
-    <input [(ngModel)]="ship.name" placeholder="Ship Name">
-  </div>
+<h2>Create Player</h2>
+  <table>
+    <tr>
+      <td>Name: </td>
+      <td><input [(ngModel)]="players[0].name" placeholder="Player Name"></td>
+    </tr>
+    <tr>
+      <td>Ship: </td>
+      <td><input [(ngModel)]="ship.name" placeholder="Ship Name"></td>
+    </tr>
+  </table>
   <input type="button" value="Start Game" (click)="startGame()" />
 </div>
-<player-detail [player]="player" [ship]="ship"></player-detail>
+<player-detail [player]="players[0]" [ship]="ship"></player-detail>
 <ship-detail [ship]="ship"></ship-detail>
-<port-detail [port]="port" [player]="player" [ship]="ship"></port-detail>
+<port-detail [port]="port" [player]="players[0]" [ship]="ship"></port-detail>
 <!-- router-outlet></router-outlet -->
 <!-- div>
 	<h2>Player Two</h2>
